@@ -21,8 +21,8 @@ To run it on your own example, create a file similar to **load_.m**, which loads
 * framework.lattice:   lattice vectors for periodic frameworks (empty if not periodic)  
 * framework.pfix:      vector of particle indices to fix ([i,j] if dim=2 or [i,j,k] if dim=3). Empty to fix COM & rotation constraints instead.  
 * framework.types:     Bar types for a tensegrity (0=bar, 1=strut, -1=cable.)  
-* Order in types, must match order of bonds in `[rr,cc] = find(triu(a))`.  
-* Empty if a bar framework.   
+                       Order in types, must match order of bonds in `[rr,cc] = find(triu(a))`.  
+                       Empty if a bar framework.   
                        
 Other things you might want to change in driver_almostrigidity.m are:   
 * tols = maximum singular value for constructing almost-flex-space and almost-stress space  
