@@ -4,9 +4,9 @@ This is Matlab code to perform the Almost Rigidity test introduced in
 
  *Holmes‐Cerfon, M., Theran, L., & Gortler, S. J. (2019). Almost‐Rigidity of Frameworks. Communications on Pure and Applied Mathematics.*
 
-The main script that performs the test is **driver_almostrigidity.m**.
+The main script that performs the test is **driver_almostrigidity.m**. This script requires CVX to be installed; you can download CVX at [http://cvxr.com/cvx/](http://cvxr.com/cvx/).
     
-This script runs two examples. You can choose which one by commenting out one of the following lines: 
+The script runs two examples. You can choose which one by commenting out one of the following lines: 
 
     framework = load_n10;     % n=10 hypostatic framework
     framework = load_exampleTensegrity;  % example of a 2d tensegrity
