@@ -8,7 +8,7 @@ The main script that performs the test is **driver_almostrigidity.m**. This scri
     
 The script runs two examples. You can choose which one by commenting out one of the following lines: 
 
-    framework = load_n10;     % n=10 hypostatic framework
+    framework = load_n10;                % n=10 hypostatic framework
     framework = load_exampleTensegrity;  % example of a 2d tensegrity
     
 To run it on your own example, create a file similar to **load_.m**, which loads the following data into a 'framework' struct:   
