@@ -12,7 +12,7 @@ The script runs two examples. You can choose which one by commenting out one of 
     framework = load_exampleTensegrity;  % example of a 2d tensegrity
     
 To run it on your own example, create a file similar to **load_.m**, which loads the following data into a 'framework' struct:   
-* framework.x:         vector of framework vertices (dim x n - dimensional vector)
+* framework.x:         vector of framework vertices (n x dim - dimensional vector)
 * framework.n:         # of vertices
 * framework.dim:       dimension of ambient space (2 or 3)  
 * framework.a:         adjacency matrix (n x n)  
