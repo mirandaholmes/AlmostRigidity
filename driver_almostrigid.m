@@ -37,7 +37,7 @@ params = struct(...
 ifdisp = 1;  % display information as we go along
 ifquiet = 1;     % use cvx in quiet mode
 ifplot = 1;   % plot framework at the end
-   whichWplot = 1;  % which stress to plot: 1=W, 2=W*alph
+   whichWplot = 1;  % which stress to plot: 1=W, 2=W*alph, 0 = none
    ivplot = inf;  % which flex to plot (increasing order of sing vals), inf for all
    iwplot = 1;    % which stress to plot  (increasing order of sing vals)
    davg = 1;     % typical distance between points (for plotting)
