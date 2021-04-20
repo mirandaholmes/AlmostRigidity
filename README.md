@@ -30,7 +30,7 @@ Other things you might want to change in driver_almostrigidity.m are:
 
 I am always interested in learning about applications of this code. 
 If you use it, please don't hesitate to write to me with comments / questions / bugs / etc (mch328@nyu.edu).
-If you use this code in a publication, please cite the paper it is based on: 
+If you use this code to help with a publication, please cite the paper it is based on: 
 
   *Holmes‐Cerfon, M., Theran, L., & Gortler, S. J. (2019). Almost‐Rigidity of Frameworks. Communications on Pure and Applied Mathematics.*
     
