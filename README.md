@@ -28,6 +28,8 @@ Other things you might want to change in driver_almostrigidity.m are:
 * tols = maximum singular value for constructing almost-flex-space and almost-stress space  
 * plotting options -- see options in code.   
 
+Warning -- there is no error checking or input checking in this code. 
+
 I am always interested in learning about applications of this code. 
 If you use it, please don't hesitate to write with comments / questions / bugs / etc (mch328@nyu.edu).
 If you use this code to help with a publication, please cite the paper it is based on: 
