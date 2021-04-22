@@ -2,7 +2,7 @@
 
 This is Matlab code to perform the Almost Rigidity test introduced in 
 
- *Holmes‐Cerfon, M., Theran, L., & Gortler, S. J. (2019). Almost‐Rigidity of Frameworks. Communications on Pure and Applied Mathematics.*
+ *M. Holmes‐Cerfon, L. Theran, & S. J. Gortler. (2019). Almost‐Rigidity of Frameworks. Communications on Pure and Applied Mathematics.*
 
 The main script that performs the test is **driver_almostrigidity.m**. It requires CVX, which you can download at [http://cvxr.com/cvx/](http://cvxr.com/cvx/).
     
@@ -34,5 +34,5 @@ I am always interested in learning about applications of this code.
 If you use it, please don't hesitate to write with comments / questions / bugs / etc (mch328@nyu.edu).
 If you use this code to help with a publication, please cite the paper it is based on: 
 
-  *Holmes‐Cerfon, M., Theran, L., & Gortler, S. J. (2019). Almost‐Rigidity of Frameworks. Communications on Pure and Applied Mathematics.*
+  *M. Holmes‐Cerfon, L. Theran, & S. J. Gortler. (2019). Almost‐Rigidity of Frameworks. Communications on Pure and Applied Mathematics.*
     
