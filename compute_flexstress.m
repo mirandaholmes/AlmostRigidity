@@ -4,13 +4,25 @@
 % remember: 
 %       # flex - # s.s. = nvar - ncon
 %
-%
+
 % created jan 25, 2018
-%
+
 %
 % NOTE: not getting ghost values for ifsparse = 1;
 % could do QR to get ghost singular vectors
 %
+% NOTE 2: not getting singular values (or V) correct, if actually want to restrict
+% to a particular subspace. All singular values are calculated assuming
+% trivials are used to form linear space. 
+%
+% compute_flexstress_0: problem with singular values, as described in note
+% 2 above. 
+%
+% modify may 6, 2019
+% compute_flexstress: uses [R;L] to compute null space and ... 
+% NO! problem then with stresses: get stresses associated with extra linear
+% constraints. (Not if they're trivial...) 
+% 
 %
 
 function [V,W,s,gap] = compute_flexstress(R,L,p)
@@ -57,6 +69,7 @@ end
 
 % extract singular values, right sing vecs, left sing vecs
 s = flipud(svals);
+V1 = [];
 if(~ifsparse)
     if(istart <= nvar)
         V1 = Vf(:,istart:nvar);
@@ -80,10 +93,13 @@ if(~isempty(L) && ~isempty(V1))
     V = V1*A;  % solves LV2 = 0 and lives in subspace V1
     %V = orth(V);   % find an orthogonal basis of V2, via svd
     %%% unnecessary, since A is orthogonal, V1 is orthogonal
-else
+elseif(~isempty(V1))
     V = V1;
+else 
+    V = [];
 end
 %%% do something to account for singular values in L's subspace?****
+
 
 
 % get gap
@@ -92,6 +108,16 @@ if(itol > 1 && itol <= length(svals))
 else
     gap = NaN;
 end
+
+
+
+% % extract singular values, right sing vecs, left sing vecs
+% s = flipud(svals); % return all singular values %s = svals(istart:nvar);
+% V1 = Vf(:,istart:end);   % right null space  %V1 = Vf(:,istart:nvar); % used for Full calcs
+% V1 = fliplr(V1);
+% W = Wf(:,istart:end); % left null space %W = Wf(:,istart:ncon); % used for Full calcs 
+% W = fliplr(W);
+
 
 
 
